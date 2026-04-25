@@ -1,5 +1,5 @@
 // Typewriter
-const text = "This year you didn’t travel… so I brought the world to you.";
+const text = "This year you didn’t travel… so I tried to bring the world to you.";
 let index = 0;
 
 function typeWriter() {
@@ -19,5 +19,5 @@ window.onload = typeWriter;
 // Final message
 function revealMessage() {
   document.getElementById("final-message").innerText =
-    "You didn’t travel this year… but somehow, you still made everything feel like a journey.\n\nHappy Birthday ❤️";
+    "My bubu.\n\nHappy Birthday ❤️";
 }

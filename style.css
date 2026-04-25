@@ -3,6 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a;
   color: white;
+  overflow-x: hidden;
 }
 
 section {
@@ -13,12 +14,83 @@ section {
   align-items: center;
 }
 
-img {
-  width: 60%;
-  border-radius: 20px;
-  margin-bottom: 20px;
+/* HERO */
+.hero {
+  text-align: center;
 }
 
-.hero {
-  background: linear-gradient(to bottom, #1e293b, #0f172a);
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* LETTER */
+.letter {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.letter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-container {
+  position: relative;
+  width: 60%;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* Hover zoom */
+.image-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Visible text */
+.visible-text {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+  text-align: center;
+  width: 70%;
+}
+
+/* Hidden text */
+.hidden-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  opacity: 0;
+  background: rgba(0,0,0,0.65);
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.image-container:hover .hidden-text {
+  opacity: 1;
+}
+
+/* FINAL */
+.final button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
 }
